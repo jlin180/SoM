@@ -17,7 +17,9 @@ import android.widget.EditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
 //fragment
 public class NotingFragment extends Fragment implements RetrieveGetSentiment.AsyncResponse {
@@ -25,7 +27,7 @@ public class NotingFragment extends Fragment implements RetrieveGetSentiment.Asy
     public NotingFragment() {
     }
 
-    Hashtable<String, Double> comm = new Hashtable<>();
+    Hashtable<String, Object> comm = new Hashtable<>();
     String str;
     String st;
     static int[] arr = new int[2]; //count of the feelings neg
@@ -63,20 +65,23 @@ public class NotingFragment extends Fragment implements RetrieveGetSentiment.Asy
 
             }
         });
+
         return view;
     }
 
     public void uploadData(String score) {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("server/saving-data/fireblog");
+        DatabaseReference ref = database.getReference("users/temp/logs/");
         String str = this.str.toLowerCase();
-        GFG hashME = new GFG();
-        String hash = hashME.getSHA(str);
         double s = Double.parseDouble(score);
 
-        DatabaseReference comments = ref.child("Comments");
-        comm.put(hash, s);
-        comments.setValue(comm);
+        String key = DateFormat.getDateTimeInstance().format(new Date()).toString();
+        LogObj input = new LogObj(this.str, s);
+//        comm.put("DateTime", DateFormat.getDateTimeInstance().format(new Date()));
+//        comm.put("log", this.str);
+//        comm.put("Happy%", s);
+//        comments(comm);
+        ref.child(key).setValue(input);
         countComment(s);
     }
 
