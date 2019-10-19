@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-common:16.0.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/7b632ce67b4e6260f2d9864cdc409f1d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/7b632ce67b4e6260f2d9864cdc409f1d/res" />
+      <root url="file://D:/AndroidStudioProjects/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/b4642c1ba1cda59caa001f2c464e3409/res" />
+      <root url="jar://D:/AndroidStudioProjects/caches/transforms-1/files-1.1/firebase-common-16.0.4.aar/b4642c1ba1cda59caa001f2c464e3409/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/16.0.4/677bab4705381a3dd75cbb542aaa91d1194878ab/firebase-common-16.0.4-javadoc.jar!/" />
+      <root url="jar://D:/AndroidStudioProjects/caches/modules-2/files-2.1/com.google.firebase/firebase-common/16.0.4/677bab4705381a3dd75cbb542aaa91d1194878ab/firebase-common-16.0.4-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />
   </library>
