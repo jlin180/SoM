@@ -4,7 +4,10 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.ResultReceiver;
-import android.support.annotation.Nullable;
+
+
+import androidx.annotation.Nullable;
+
 //custom intent services to use azure api
 public class CustomIntentService extends IntentService {
 
