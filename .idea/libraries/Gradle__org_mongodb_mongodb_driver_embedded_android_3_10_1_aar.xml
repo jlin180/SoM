@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mongodb:mongodb-driver-embedded-android:3.10.1@aar">
+    <CLASSES>
+      <root url="file://D:/AndroidStudioProjects/caches/transforms-1/files-1.1/mongodb-driver-embedded-android-3.10.1.aar/c0cf55e20f557bc9b8514c77c0d4a558/res" />
+      <root url="jar://D:/AndroidStudioProjects/caches/transforms-1/files-1.1/mongodb-driver-embedded-android-3.10.1.aar/c0cf55e20f557bc9b8514c77c0d4a558/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/AndroidStudioProjects/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-embedded-android/3.10.1/3dbe9d3c222269f8469dc462734f91adc135aa3e/mongodb-driver-embedded-android-3.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
