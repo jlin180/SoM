@@ -1,7 +1,10 @@
 package edu.qc.seclass.glm;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 //activity
 public class MoodActivity extends AppCompatActivity {
 
