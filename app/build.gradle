@@ -40,11 +40,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'androidx.annotation:annotation:1.0.0'
     implementation 'com.google.firebase:firebase-core:16.0.1'
-<<<<<<< HEAD
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-=======
     implementation 'com.android.support:recyclerview-v7:28.0.0'
-
->>>>>>> c48d4a4bc0a81fb489bd06d0472c4ae01ea669c1
 }
 apply plugin: 'com.google.gms.google-services'

@@ -1,20 +1,11 @@
 package edu.qc.seclass.glm;
 
 import android.os.Bundle;
-<<<<<<< HEAD
-
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import androidx.fragment.app.Fragment;
-
-=======
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.util.Log;
->>>>>>> c48d4a4bc0a81fb489bd06d0472c4ae01ea669c1
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
