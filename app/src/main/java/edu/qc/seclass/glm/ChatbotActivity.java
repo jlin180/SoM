@@ -2,6 +2,7 @@ package edu.qc.seclass.glm;
 
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,6 +28,7 @@ public class ChatbotActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chatbot);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         mListView = (ListView) findViewById(R.id.listView);
         mButtonSend = (FloatingActionButton) findViewById(R.id.btn_send);
         mEditTextMessage = (EditText) findViewById(R.id.et_message);
@@ -44,6 +46,17 @@ public class ChatbotActivity extends AppCompatActivity {
                 mListView.setSelection(mAdapter.getCount() - 1);
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void sendMessage(String message) {
