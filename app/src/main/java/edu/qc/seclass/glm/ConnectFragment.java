@@ -1,11 +1,19 @@
 package edu.qc.seclass.glm;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,9 +35,31 @@ public class ConnectFragment extends Fragment {
      * @param savedInstanceState
      * @return
      */
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_connect,container,false);
+
+
+        View view = inflater.inflate(R.layout.fragment_connect,container,false);
+        Button mapBtn = (Button) view.findViewById(R.id.mapBtn);
+        mapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent ( getActivity(), MapActivity.class);
+                startActivity(i);
+            }
+        });
+        
+        return view;
     }
+
+
+
+
+
+
+
+
 }

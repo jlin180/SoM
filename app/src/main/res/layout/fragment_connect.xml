@@ -20,7 +20,17 @@
             android:text="C O N N E C T"
             android:textColor="	#88BBBE"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/mapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:width="300dp"
+            android:height="300dp"
+            android:text="Hello world"/>
+
 
         <TextView
             android:id="@+id/textView2"
