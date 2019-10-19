@@ -48,8 +48,9 @@ public class LogFragment extends Fragment {
                     LogObj input = snapshot.getValue(LogObj.class);
                     String date = input.DateTime;
                     date = date.substring(0,18) + date.substring(21);
+                    String val = (input.log.length() <= 10)? input.log : input.log.substring(0,11);
                     ourJournal.add(date
-                            + "  :  " + input.log);
+                            + "  :  " + val);
                 }
                 showList(ourJournal, view);
 

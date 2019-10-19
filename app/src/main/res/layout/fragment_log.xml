@@ -33,7 +33,9 @@
             android:layout_below="@id/education_title_tv"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="11dp"
+            android:divider="#f00"
+            android:dividerHeight="1dp" />
 
 
     </RelativeLayout>
