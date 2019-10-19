@@ -20,7 +20,16 @@
             android:text="C O N N E C T"
             android:textColor="	#88BBBE"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:height="300dp"
+            android:width="300dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/MapButton"
+            />
 
         <TextView
             android:id="@+id/textView2"
