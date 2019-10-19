@@ -1,17 +1,15 @@
 package edu.qc.seclass.glm;
 
-<<<<<<< HEAD
+
+
+
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-=======
-
-import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
->>>>>>> b3a38e8cbc6d30a0ad16ff7bbcf571ea97b9f169
 
 //activity
 public class AnxietyActivity extends AppCompatActivity {
