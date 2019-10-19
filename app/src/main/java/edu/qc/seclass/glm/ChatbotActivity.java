@@ -1,14 +1,17 @@
 package edu.qc.seclass.glm;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ChatbotActivity extends AppCompatActivity {
 
