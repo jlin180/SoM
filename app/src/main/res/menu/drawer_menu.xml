@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!--first section for the navigation bar
+     these items execute an action and stay selected-->
+    <group android:checkableBehavior="single">
+
+        <!--item icons and text go side to side b/c-->
+        <!--they are part of the same item in a group-->
+
+        <item
+            android:id="@+id/nav_noting_item"
+            android:icon="@drawable/ic_education_btn"
+            android:title="Noting on the go" />
+
+        <item
+            android:id="@+id/nav_education_item"
+            android:icon="@drawable/ic_category"
+            android:title="Education" />
+
+        <item
+            android:id="@+id/nav_connect_item"
+            android:icon="@drawable/ic_connect"
+            android:title="Connect" />
+
+        <item
+            android:id="@+id/nav_hotlines_item"
+            android:icon="@drawable/ic_hotlines"
+            android:title="Tips + Info" />
+
+        <item
+            android:id="@+id/nav_log_item"
+            android:icon="@drawable/ic_book"
+            android:title="Log" />
+
+        <item
+            android:id="@+id/nav_evaluation_item"
+            android:icon="@drawable/ic_eval"
+            android:title="Evaluation" />
+
+
+    </group>
+
+    <!--second section for the navigation bar
+     these will only trigger an action-->
+
+
+</menu>

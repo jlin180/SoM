@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "338795343718",
+    "firebase_url": "https://sentio-92eb2.firebaseio.com",
+    "project_id": "sentio-92eb2",
+    "storage_bucket": "sentio-92eb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338795343718:android:5d543849520a1764",
+        "android_client_info": {
+          "package_name": "edu.qc.seclass.glm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAYhjKOglwSRXwjtcaBgWt5wD6vLwczwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338795343718-nq2lkat10hqgn5vtti3424329ef89urb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

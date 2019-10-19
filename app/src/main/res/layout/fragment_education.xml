@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe6e6"
+    tools:context=".EducationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/education_title_tv"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="E D U C A T I O N"
+            android:textAlignment="center"
+            android:textColor="#E06E88"
+            android:textSize="30sp"
+            />
+
+        <ImageButton
+            android:id="@+id/mood_disorder_btn"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/education_title_tv"
+            android:background="@drawable/mood_disorders"
+            />
+
+        <ImageButton
+            android:id="@+id/anxiety_btn"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/mood_disorder_btn"
+            android:background="@drawable/anxiety_disorders"
+
+            />
+
+        <ImageButton
+            android:id="@+id/autism_btn"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/anxiety_btn"
+            android:background="@drawable/autism_disorders"
+
+            />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

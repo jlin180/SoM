@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffe6e6"
+    >
+
+
+    <TextView
+        android:id="@+id/evaluation_title_tv"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="E V A L U A T I O N"
+        android:textAlignment="center"
+        android:textColor="#E06E88"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/noting_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="3dp"
+
+        android:layout_below="@id/evaluation_title_tv"
+        android:textSize="22dp"
+        android:text="Noting can be used as a meditation technique. It raises self awareness. By noting the things that trouble our mind at any given moment we can learn to give it proper attention. Most importantly we can help ourselves maintain our focus on the tasks that we want"
+        />
+
+    <TextView
+        android:id="@+id/evaluation_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_below="@id/noting_tv"
+        android:textSize="22dp"
+        android:text="After reviewing today's thoughts we would like to say that: "
+        />
+
+
+</RelativeLayout>
