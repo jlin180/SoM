@@ -16,12 +16,13 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
     private int SELF = 100;
-    private ArrayList<Notification.MessagingStyle.Message> messageArrayList;
+//    private ArrayList<Notification.MessagingStyle.Message> messageArrayList;
     private ArrayList<Message> messageArrayList;
 
 
-    public ChatAdapter(ArrayList<Notification.MessagingStyle.Message> messageArrayList) {
-        this.messageArrayList = messageArrayList;
+//    public ChatAdapter(ArrayList<Notification.MessagingStyle.Message> messageArrayList) {
+    public ChatAdapter(ArrayList<Message> messageArrayList) {
+    this.messageArrayList = messageArrayList;
 
     }
 
@@ -34,11 +35,11 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (viewType == SELF) {
             // self message
             itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.chat_item_self, parent, false);
+                    .inflate(R.layout.activity_chatbot_user_query, parent, false);
         } else {
             // WatBot message
             itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.chat_item_watson, parent, false);
+                    .inflate(R.layout.activity_chatbot_user_query, parent, false);
         }
 
 
@@ -47,7 +48,8 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        Notification.MessagingStyle.Message message = messageArrayList.get(position);
+//        Notification.MessagingStyle.Message message = messageArrayList.get(position);
+        Message message = messageArrayList.get(position);
         if (message.getId() != null && message.getId().equals("1")) {
             return SELF;
         }
@@ -57,9 +59,11 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-        Notification.MessagingStyle.Message message = messageArrayList.get(position);
+//        Notification.MessagingStyle.Message message = messageArrayList.get(position);
+        Message message = messageArrayList.get(position);
         message.setMessage(message.getMessage());
-        ((ViewHolder) holder).message.setText(message.getMessage());
+//        ((ViewHolder) holder).message.setText(message.getMessage());
+//        ((ViewHolder) holder).message.setText("Hello world");
     }
 
     @Override
@@ -72,7 +76,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public ViewHolder(View view) {
             super(view);
-            message = (TextView) itemView.findViewById(R.id.message);
+            message = (TextView) itemView.findViewById(R.id.text);
 
             //TODO: Uncomment this if you want to use a custom Font
             /*String customFont = "Montserrat-Regular.ttf";

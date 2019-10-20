@@ -3,10 +3,14 @@ package edu.qc.seclass.glm;
 import java.io.Serializable;
 
 public class Message implements Serializable {
-    String id, message;
+    public String id, message;
 
 
     public Message() {
+    }
+
+    public Message(String mess){
+        this.message = mess;
     }
 
     public Message(String id, String message, String createdAt) {
