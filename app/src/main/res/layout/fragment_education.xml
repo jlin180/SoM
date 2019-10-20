@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6e6"
+    android:background="@drawable/educationbackground2"
     tools:context=".EducationFragment">
 
     <RelativeLayout
@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="E D U C A T I O N"
             android:textAlignment="center"
             android:textColor="#E06E88"
             android:textSize="30sp"
@@ -27,35 +26,104 @@
 
         <ImageButton
             android:id="@+id/mood_disorder_btn"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_below="@+id/education_title_tv"
-            android:background="@drawable/mood_disorders"
-            />
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent" />
 
         <ImageButton
             android:id="@+id/anxiety_btn"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/mood_disorder_btn"
-            android:background="@drawable/anxiety_disorders"
-
-            />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignBottom="@id/mood_disorder_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/mood_disorder_btn"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent" />
 
         <ImageButton
             android:id="@+id/autism_btn"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/anxiety_btn"
-            android:background="@drawable/autism_disorders"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/mood_disorder"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
 
             />
+
+        <TextView
+            android:id="@+id/mood_disorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mood_disorder_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="13dp"
+            android:layout_alignBottom="@id/anxiety"
+            android:layout_toRightOf="@+id/mood_disorder_btn"
+            android:fontFamily="sans-serif-medium"
+
+            android:textColor="#0099CC"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/anxiety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/anxiety_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="sans-serif-medium"
+
+            android:textColor="#FA8075"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/schizophrenia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/autism_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif-medium"
+
+            android:textColor="#6CB340"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ocd_btn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/anxiety"
+            android:layout_alignBottom="@id/autism_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/ocd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ocd_btn"
+            android:layout_alignBottom="@id/schizophrenia"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="75dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#F1AE31"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

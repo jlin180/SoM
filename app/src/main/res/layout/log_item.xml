@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="350dp"
     android:layout_height="50dp"
-    android:textSize="20dp"
     android:gravity="center|left"
-    tools:text="Holding log space">
+    android:textSize="15dp"
+    tools:text="Holding log space"
+    android:layout_centerHorizontal="true">
 
 </TextView>

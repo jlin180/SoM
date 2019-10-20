@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6e6"
+    android:background="@drawable/connectbackground"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="17dp"
-            android:text="C O N N E C T"
+
             android:textColor="	#88BBBE"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
-            android:text="With those that could use your help."
+
             android:textColor="#E06E88"
             android:textSize="17sp"
             android:layout_below="@id/textView"/>
@@ -50,7 +50,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/community" />
+             />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -58,8 +58,13 @@
             android:layout_height="200dp"
             android:layout_below="@id/textView6"
             android:layout_alignParentRight="true"
+<<<<<<< HEAD
             android:layout_marginRight="25dp"
             app:srcCompat="@drawable/educated" />
+=======
+
+            android:layout_marginRight="25dp" />
+>>>>>>> 43f7f3767598427748bd4e79dea041843ff05570
 
         <ImageView
             android:id="@+id/imageView3"
@@ -68,8 +73,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
             android:layout_below="@+id/textView7"
-            android:layout_marginTop="31dp"
-            app:srcCompat="@drawable/illustration" />
+            android:layout_marginTop="31dp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -79,8 +83,7 @@
             android:layout_toEndOf="@+id/imageView"
             android:layout_marginTop="25dp"
             android:layout_marginLeft="20dp"
-            android:textSize="13dp"
-            android:text="Through education, awareness, and discussion, the way mental health is approached can improve. Communities provide a safe space for those struggle from mental health issues and are currently seeking help." />
+            android:textSize="13dp"/>
 
         <TextView
             android:id="@+id/textView7"
@@ -89,8 +92,7 @@
             android:layout_below="@id/imageView"
             android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
-            android:text="Addressing the topic of mental health and providing the proper aid can be difficult. By being better educated in multiple areas of Psychology, you can be a great support system for someone." />
+            android:layout_marginTop="25dp"/>
 
 
         <TextView
@@ -102,7 +104,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
 
-            android:text="Make a positive impact in the life of those struggling with mental health." />
+            />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
