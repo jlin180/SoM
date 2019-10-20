@@ -11,7 +11,7 @@ public class HelplineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_helpline);
+        setContentView(R.layout.fragment_hotlines);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
