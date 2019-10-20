@@ -46,7 +46,11 @@ public class LogFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     LogObj input = snapshot.getValue(LogObj.class);
-                    ourJournal.add(input.log);
+                    String date = input.DateTime;
+                    date = date.substring(0,18) + date.substring(21);
+                    String val = (input.log.length() <= 10)? input.log : input.log.substring(0,11);
+                    ourJournal.add(date
+                            + "  :  " + val);
                 }
                 showList(ourJournal, view);
 
