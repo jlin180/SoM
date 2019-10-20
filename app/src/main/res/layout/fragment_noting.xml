@@ -50,7 +50,6 @@
             android:fontFamily="sans-serif-medium"
             android:hint="I'm feeling..."
             android:inputType="text"
-
             android:singleLine="false"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
