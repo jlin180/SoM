@@ -81,14 +81,16 @@ public class ChatbotActivity extends AppCompatActivity {
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message = mEditTextMessage.getText().toString();
-                sendMessage(message);
-                mEditTextMessage.setText("");
-                mListView.setSelection(mAdapter.getCount() - 1);
-                Log.v("result", "after done");
-                Log.v("result", "after unning " + result);
+                String message = mEditTextMessage.getText().toString().trim();
+                if(message.length() > 0) {
+                    sendMessage(message);
+                    mEditTextMessage.setText("");
+                    mListView.setSelection(mAdapter.getCount() - 1);
+                    Log.v("result", "after done");
+                    Log.v("result", "after unning " + result);
 //                ChatMessage chatMessage = new ChatMessage(result, true, true);
 //                mAdapter.add(chatMessage);
+                }
             }
         });
 

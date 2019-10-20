@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6e6"
+    android:background="@drawable/logbackground"
     tools:context=".LogFragment">
 
     <RelativeLayout
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="Today's Log"
+
             android:textAlignment="center"
             android:textColor="#E06E88"
             android:textSize="30sp"
@@ -27,13 +27,13 @@
 
         <ListView
             android:id="@+id/journal_list_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="610dp"
 
             android:layout_below="@id/education_title_tv"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="13dp"
             android:divider="#f00"
             android:dividerHeight="1dp" />
 

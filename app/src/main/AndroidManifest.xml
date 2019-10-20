@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:textStyle="italic"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatbotActivity"></activity>
+        <activity android:name=".EntriesActivity"></activity>
+        <activity android:name=".ChatbotActivity" />
         <activity
             android:name=".HelplineActivity"
             android:parentActivityName=".SadActivity" />
@@ -26,6 +27,7 @@
         <activity
             android:name=".HappyActivity"
             android:parentActivityName=".MoodActivity" />
+        <activity android:name=".MapActivity"/>
         <activity
             android:name=".AnxietyActivity"
             android:parentActivityName=".MainActivity" />

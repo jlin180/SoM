@@ -43,6 +43,15 @@ public class ConnectFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_connect,container,false);
 
+//        Button mapBtn = (Button) view.findViewById(R.id.mapBtn);
+//        mapBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent ( getActivity(), MapActivity.class);
+//                startActivity(i);
+//            }
+//        });
+
         ImageView communityButton = view.findViewById(R.id.imageView);
         communityButton.setOnClickListener(new View.OnClickListener() {
             @Override
