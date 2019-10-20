@@ -1,6 +1,8 @@
 package edu.qc.seclass.glm;
 
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -35,6 +37,8 @@ import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONObject;
+
 public class ChatbotActivity extends AppCompatActivity {
 
     private ListView mListView;
@@ -43,15 +47,18 @@ public class ChatbotActivity extends AppCompatActivity {
     private ImageView mImageView;
     private ChatMessageAdapter mAdapter;
 
+    public String result = "";
+
     private Context mContext;
 
     private Assistant watsonAssistant;
     private SessionResponse watsonAssistantSession;
 
     private void createServices() {
-        watsonAssistant = new Assistant("2019-10-19", new IamAuthenticator("9H4OlARrmzLNuMO-6Vinwrc3BmznhMxbkcWzxcqNT2-8"));
-        watsonAssistant.setServiceUrl("https://gateway-wdc.watsonplatform.net/assistant/api/v2/assistants/ce930a54-1d6c-4372-aaf5-4573f9e0e4a1/sessions");
-
+        watsonAssistant = new Assistant("2019-10-19", new IamAuthenticator(mContext.getString(R.string.assistant_apikey)));
+        watsonAssistant.setServiceUrl(mContext.getString(R.string.assistant_url));
+        Log.v("created", checkInternetConnection());
+        Log.v("Created" , watsonAssistant.getName());
     }
 
 
@@ -78,6 +85,10 @@ public class ChatbotActivity extends AppCompatActivity {
                 sendMessage(message);
                 mEditTextMessage.setText("");
                 mListView.setSelection(mAdapter.getCount() - 1);
+                Log.v("result", "after done");
+                Log.v("result", "after unning " + result);
+//                ChatMessage chatMessage = new ChatMessage(result, true, true);
+//                mAdapter.add(chatMessage);
             }
         });
 
@@ -102,12 +113,14 @@ public class ChatbotActivity extends AppCompatActivity {
         //respond as Helloworld
 //        mimicOtherMessage("HelloWorld");
         Thread thread = new Thread(new Runnable() {
+            volatile boolean running = true;
             public void run() {
-//                try {
+                try {
                     if (watsonAssistantSession == null) {
                         Log.v("error", "watson assistant was null");
-                        ServiceCall<SessionResponse> call = watsonAssistant.createSession(new CreateSessionOptions.Builder().assistantId("ce930a54-1d6c-4372-aaf5-4573f9e0e4a1").build());
+                        ServiceCall<SessionResponse> call = watsonAssistant.createSession(new CreateSessionOptions.Builder().assistantId(mContext.getString(R.string.assistant_id)).build());
                         Log.v("error",call.toString());
+
                         Log.v("error", "execute and result");
                         watsonAssistantSession = call.execute().getResult();
                         Log.v("error", "done if");
@@ -118,7 +131,7 @@ public class ChatbotActivity extends AppCompatActivity {
                             .build();
                     Log.v("error", "before message options");
                     MessageOptions options = new MessageOptions.Builder()
-                            .assistantId("ce930a54-1d6c-4372-aaf5-4573f9e0e4a1")
+                            .assistantId(mContext.getString(R.string.assistant_id))
                             .input(input)
                             .sessionId(watsonAssistantSession.getSessionId())
                             .build();
@@ -134,25 +147,46 @@ public class ChatbotActivity extends AppCompatActivity {
                         outMessage.setId("2");
 
 //                        messageArrayList.add(outMessage.getMessage());
-                        mimicOtherMessage("Hello world");
+//                        Log.v("result", response.getOutput().toString());
+//                        JSONObject obj = new JSONObject(response.getOutput().toString());
+//                        Log.v("result", obj.toString());
+//                        Log.v("result", "find Split");
+//                        Log.v("result", response.getOutput().getGeneric().get(0).text());
+//                        Log.v("result", obj.getJSONObject("generic").toString());
+//                        Log.v("result", obj.get("generic").toString());
+                        result = response.getOutput().getGeneric().get(0).text();
+//                        running = false;
+//                        if(!running) return;
+//                        mimicOtherMessage(result);
+                        Log.v("result", result);
+
+//                        mAdapter.add(chatMessage);
                     }
-//                    else{
-//                        Log.v("error", "broke if loop");
-//                    }
-//                } catch (Exception e) {
-//                    Log.v("error", "exception");
-//                }
+                    else{
+                        Log.v("error", "broke if loop");
+                    }
+                } catch (Exception e) {
+                    Log.v("error", "exception");
+                }
             }
         });
-
         thread.start();
+        try{
+            thread.join();
+        }
+        catch (Exception e){
 
-        mimicOtherMessage("Out of try");
+        }
+        Log.v("result", "end");
+        Log.v("result", result);
+        mimicOtherMessage(result);
     }
 
     private void mimicOtherMessage(String message) {
         ChatMessage chatMessage = new ChatMessage(message, false, false);
         mAdapter.add(chatMessage);
+//        result = message;
+//        return;1
     }
 
     private void sendMessage() {
@@ -166,4 +200,24 @@ public class ChatbotActivity extends AppCompatActivity {
         ChatMessage chatMessage = new ChatMessage(null, false, true);
         mAdapter.add(chatMessage);
     }
+
+    private String checkInternetConnection() {
+        // get Connectivity Manager object to check connection
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null &&
+                activeNetwork.isConnectedOrConnecting();
+
+        // Check for network connections
+        if (isConnected) {
+            return "true";
+        } else {
+            Toast.makeText(this, " No Internet Connection available ", Toast.LENGTH_LONG).show();
+            return "false";
+        }
+
+    }
+
 }
