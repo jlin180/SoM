@@ -128,7 +128,7 @@
             android:layout_height="143dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/anxiety" />
+            app:srcCompat="@drawable/anxiety4" />
 
         <Button
             android:id="@+id/button2"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6e6"
+    android:background="@drawable/educationbackground2"
     tools:context=".EducationFragment">
 
     <RelativeLayout
@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="E D U C A T I O N"
             android:textAlignment="center"
             android:textColor="#E06E88"
             android:textSize="30sp"
@@ -33,7 +32,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/mood_disorders2" />
+            android:background="@android:color/transparent" />
 
         <ImageButton
             android:id="@+id/anxiety_btn"
@@ -43,7 +42,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/mood_disorder_btn"
             android:layout_marginEnd="30dp"
-            android:background="@drawable/anxiety" />
+            android:background="@android:color/transparent" />
 
         <ImageButton
             android:id="@+id/autism_btn"
@@ -53,7 +52,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/schizophrenia"
+            android:background="@android:color/transparent"
 
             />
 
@@ -68,7 +67,7 @@
             android:layout_alignBottom="@id/anxiety"
             android:layout_toRightOf="@+id/mood_disorder_btn"
             android:fontFamily="sans-serif-medium"
-            android:text="Mood Disorder"
+
             android:textColor="#0099CC"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -82,7 +81,7 @@
             android:layout_marginTop="13dp"
             android:layout_marginEnd="60dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Anxiety"
+
             android:textColor="#FA8075"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -96,7 +95,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="13dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Schizophrenia"
+
             android:textColor="#6CB340"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -110,7 +109,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="30dp"
-            android:background="@drawable/ocd" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/ocd"
@@ -122,7 +121,6 @@
             android:layout_marginTop="13dp"
             android:layout_marginEnd="75dp"
             android:fontFamily="sans-serif-medium"
-            android:text="OCD"
             android:textColor="#F1AE31"
             android:textSize="15dp"
             android:textStyle="bold" />
