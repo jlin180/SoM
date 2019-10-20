@@ -22,18 +22,14 @@
             android:textSize="36sp"
             android:textStyle="bold"
             />
-<<<<<<< HEAD
 
-        <Button
-            android:id="@+id/mapBtn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:width="300dp"
-            android:height="300dp"
-            android:text="Hello world"/>
-
-=======
->>>>>>> ea090842c7441180c48e8e7b0dd44b5b0ba760e9
+        <!--<Button-->
+            <!--android:id="@+id/mapBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:width="300dp"-->
+            <!--android:height="300dp"-->
+            <!--android:text="View Map"/>-->
 
         <TextView
             android:id="@+id/textView2"
