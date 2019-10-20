@@ -40,16 +40,6 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/textView18"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textView17"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="5dp"
-            android:text="--> Bipolar disorder, when have dramatic shifts in a person's mood, energy and ability to think clearly. "
-            android:textSize="12sp" />
-
-        <TextView
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +48,7 @@
             android:text="Possible causes"
             android:textColor="#ffffff"
             android:textStyle="bold"
-            android:layout_below="@id/textView18" />
+            android:layout_below="@id/textView17" />
 
         <TextView
             android:id="@+id/textView20"
@@ -128,7 +118,19 @@
             android:layout_height="143dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/mood_disorders" />
+            app:srcCompat="@drawable/mood_disorders4" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView25"
+            android:background="#9ED8DD"
+            android:text="I want to learn more!"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
