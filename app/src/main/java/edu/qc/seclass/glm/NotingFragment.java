@@ -145,12 +145,10 @@ public class NotingFragment extends Fragment implements RetrieveGetSentiment.Asy
         //final String[] score2 = {null};//don't know if this is used
         EditText feeling = view.findViewById(R.id.editText);
         st = feeling.getText().toString();
-
-        System.out.println(st + "**********");
-
         setStr(st);
         RetrieveGetSentiment RetrieveGetSentiment = new RetrieveGetSentiment(this);
         RetrieveGetSentiment.execute(feeling.getText().toString());
+        feeling.setText("");
     }
 
 
