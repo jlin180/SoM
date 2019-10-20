@@ -4,4 +4,5 @@
     <!-- The strings are for accessibility in case the user needs the screen reader to tell what is happening on the screen-->
     <string name="navigation_drawer_open">Open Navigation drawer</string>
     <string name="navigation_drawer_close">Close Navigation drawer</string>
+    <string name="MAP_API_KEY">AIzaSyDMEOoJ_OY9f7Z285JA9tQ1pwAdiJ3xfXY</string>
 </resources>

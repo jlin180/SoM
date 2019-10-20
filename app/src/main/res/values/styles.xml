@@ -25,5 +25,7 @@
         <!--making the slight bar at the top transparent-->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
 </resources>
