@@ -149,5 +149,12 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/anxiety_disorders" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/textView14"
+            android:layout_height="wrap_content"
+            android:text="I want to learn more!" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
