@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.qc.seclass.glm">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:fontFamily="sans-serif-smallcaps"
@@ -16,6 +17,7 @@
         <activity
             android:name=".HelplineActivity"
             android:parentActivityName=".SadActivity" />
+        <activity android:name=".MapActivity"/>
         <activity
             android:name=".ConnectActivity"
             android:parentActivityName=".HappyActivity" />
@@ -25,6 +27,7 @@
         <activity
             android:name=".HappyActivity"
             android:parentActivityName=".MoodActivity" />
+        <activity android:name=".MapActivity"/>
         <activity
             android:name=".AnxietyActivity"
             android:parentActivityName=".MainActivity" />
