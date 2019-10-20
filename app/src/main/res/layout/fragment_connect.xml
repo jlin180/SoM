@@ -22,6 +22,7 @@
             android:textSize="36sp"
             android:textStyle="bold"
             />
+<<<<<<< HEAD
 
         <Button
             android:id="@+id/mapBtn"
@@ -31,6 +32,8 @@
             android:height="300dp"
             android:text="Hello world"/>
 
+=======
+>>>>>>> ea090842c7441180c48e8e7b0dd44b5b0ba760e9
 
         <TextView
             android:id="@+id/textView2"
@@ -59,7 +62,6 @@
             android:layout_height="200dp"
             android:layout_below="@id/textView6"
             android:layout_alignParentRight="true"
-
             android:layout_marginRight="25dp"
             app:srcCompat="@drawable/educated" />
 

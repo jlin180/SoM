@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.qc.seclass.glm">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:fontFamily="sans-serif-smallcaps"
@@ -11,7 +12,11 @@
         android:supportsRtl="true"
         android:textStyle="italic"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelplineActivity" android:parentActivityName=".SadActivity"></activity>
+        <activity android:name=".ChatbotActivity"></activity>
+        <activity
+            android:name=".HelplineActivity"
+            android:parentActivityName=".SadActivity" />
+        <activity android:name=".MapActivity"/>
         <activity
             android:name=".ConnectActivity"
             android:parentActivityName=".HappyActivity" />
@@ -21,10 +26,16 @@
         <activity
             android:name=".HappyActivity"
             android:parentActivityName=".MoodActivity" />
-        <activity android:name=".AnxietyActivity" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".AutismActivity" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MoodActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".MapActivity"/>
+        <activity
+            android:name=".AnxietyActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AutismActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MoodActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

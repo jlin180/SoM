@@ -2,7 +2,6 @@ package edu.qc.seclass.glm;
 
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 //activity
